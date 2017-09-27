@@ -89,25 +89,26 @@
 	</firewall>
 	-->
 
-	<user name="root" defaultAccount="true">
-		<property name="password">123456</property>
-		<property name="schemas">TESTDB</property>
-		
-		<!-- 表级 DML 权限设置 -->
-		<!-- 		
-		<privileges check="false">
-			<schema name="TESTDB" dml="0110" >
-				<table name="tb01" dml="0000"></table>
-				<table name="tb02" dml="1111"></table>
-			</schema>
-		</privileges>		
-		 -->
-	</user>
+	
+	 <user name="root">
+                <property name="password">123456</property>
+                <property name="schemas">MYDB</property>
+                
+                <!-- 表级 DML 权限设置 -->
+                <!--            
+                <privileges check="false">
+                        <schema name="MYDB" dml="0110" >
+                                <table name="tb01" dml="0000"></table>
+                                <table name="tb02" dml="1111"></table>
+                        </schema>
+                </privileges>           
+                 -->
+        </user>
 
-	<user name="user">
-		<property name="password">user</property>
-		<property name="schemas">TESTDB</property>
-		<property name="readOnly">true</property>
-	</user>
+        <user name="user">
+                <property name="password">user</property>
+                <property name="schemas">MYDB</property>
+                <property name="readOnly">true</property>
+        </user>
 
 </mycat:server>
